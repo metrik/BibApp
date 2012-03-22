@@ -130,7 +130,7 @@ group :development do
   # - some necessary requires are missing from the main version
   # - we filter the personalize keys so that Tolk doesn't sync them
   # - we don't generate a new migration - the migration for tolk is committed into Bibapp itself
-  gem 'tolk', :git => 'git://github.com/BibApp/tolk.git', :branch => 'rails3'
+  gem 'tolk', :git => 'git@github.com:BibApp/tolk.git', :branch => 'rails3'
 end
 
 group :test, :development do
