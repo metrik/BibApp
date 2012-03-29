@@ -56,6 +56,9 @@ namespace :deploy do
     run "cd #{current_path}; git pull origin #{branch}"
   end
   
+  task :create_symlink , :except => { :no_release => true } do
+  end
+  
 
   desc "create a config directory under shared"
   task :create_shared_dirs do
@@ -100,7 +103,7 @@ end
 namespace :solr do
   desc "Reindex solr"
   task :refresh_index do
-    run "cd #{current}; sleep 10; RAILS_ENV=#{rails_env} rake solr:refresh_index"
+    run "cd #{current}; sleep 10; RAILS_ENV=#{rails_env} rake solr:refresh_index --trace"
   end
 end
 
@@ -119,10 +122,12 @@ after 'deploy:setup', 'deploy:create_shared_dirs'
 
 after 'deploy:update', 'deploy:link_config'
 after 'deploy:update', 'deploy:symlink_shared_dirs'
-before 'deploy:update', 'bibapp:stop'
 
-after 'deploy:start', 'bibapp:start'
-after 'deploy:stop', 'bibapp:stop'
+#before 'deploy:update', 'bibapp:stop'
+
+#after 'deploy:start', 'bibapp:start'
+#after 'deploy:stop', 'bibapp:stop'
+
 after 'deploy:restart', 'bibapp:restart'
 
 after 'bibapp:start', 'solr:refresh_index'
