@@ -1,0 +1,7 @@
+development:
+  port: 8982
+  stop_port: 8096
+production:
+    port: 8982
+    stop_port: 8096
+    
