@@ -1,5 +1,6 @@
 # Rake tasks to start/stop BibApp services
 
+
 namespace :bibapp do
   desc 'Starts all BibApp services: solr, delayed_jobs, passenger'
   task :start => :environment do
@@ -28,12 +29,13 @@ namespace :bibapp do
       puts "### ERROR - Starting - Delayed Job."
     end
 
+
     begin
       # Spin passenger
-      puts "\n\n* Starting - Passenger."
-      sh "touch tmp/restart.txt"
+      puts "\n\n* Starting - THIN."
+      invoke_command "thin start -C #{thin_conf}" , :via => run_method              
     rescue RuntimeError
-      puts "### ERROR - Starting - Passenger."
+      puts "### ERROR - Starting - THIN."
     end
 
     puts "Finished bibapp:start"
@@ -50,7 +52,8 @@ namespace :bibapp do
       sh "script/delayed_job -p #{Rails.env} --pid-dir=#{delayed_job_pid_dir} stop"
 
       # Spin passenger
-      sh "touch tmp/restart.txt"
+      invoke_command "thin stop -C #{thin_conf}" , :via => run_method              
+
     end
 
     puts "Finished bibapp:stop"

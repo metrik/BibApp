@@ -85,6 +85,29 @@ namespace :deploy do
 
 end
 
+
+
+desc "Run this after update code"
+after "update_code" do
+  #Thin
+  invoke_command "ln -nfs #{shared_path}/system/config/thin.yml #{current_path}/config/thin.yml", :via => run_method
+end
+
+
+set :thin_conf, "#{current_path}/config/thin.yml"   
+task :start, :roles => :app do
+ invoke_command "thin start -C #{thin_conf}" , :via => run_method        
+end
+
+task :stop, :roles => :app do
+  invoke_command "thin stop -C #{thin_conf}" , :via => run_method            
+end
+
+task :restart, :roles => :app do
+  invoke_command "thin restart -C #{thin_conf}" , :via => run_method
+end
+
+
 namespace :bibapp do
   [:stop, :start, :restart].each do |action|
     desc "#{action} Bibapp services" 
@@ -122,6 +145,7 @@ after 'deploy:setup', 'deploy:create_shared_dirs'
 
 after 'deploy:update', 'deploy:link_config'
 after 'deploy:update', 'deploy:symlink_shared_dirs'
+after 'deploy:update', 'bundler:bundle_new_release'
 
 #before 'deploy:update', 'bibapp:stop'
 
