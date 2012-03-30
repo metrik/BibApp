@@ -71,7 +71,7 @@ namespace :deploy do
   desc "link shared configuration"
   task :link_config do
     ['database.yml', 'ldap.yml', 'personalize.rb', 'smtp.yml', 
-     'solr.yml', 'sword.yml'].each do |file|
+     'solr.yml', 'sword.yml', 'thin.yml'].each do |file|
       run "ln -nfs #{shared_config}/#{file} #{current}/config/#{file}"
     end
   end
@@ -90,7 +90,7 @@ end
 desc "Run this after update code"
 after "update_code" do
   #Thin
-  invoke_command "ln -nfs #{shared_path}/system/config/thin.yml #{current_path}/config/thin.yml", :via => run_method
+  invoke_command "ln -nfs #{shared_path}/config/thin.yml #{current_path}/config/thin.yml", :via => run_method
 end
 
 
