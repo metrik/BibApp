@@ -134,7 +134,7 @@ namespace :bundler do
 
 
   task :bundle_new_release, :roles => [:web], :except => { :no_release => true } do
-    run "rm -rf #{current_path}/Gemfile.lock"
+    #run "rm -rf #{current_path}/Gemfile.lock"
     run "cd #{current_path} && bundle install --without development test "
   end
 

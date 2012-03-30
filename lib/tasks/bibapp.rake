@@ -33,7 +33,7 @@ namespace :bibapp do
     begin
       # Spin passenger
       puts "\n\n* Starting - THIN."
-      invoke_command "thin start -C #{thin_conf}" , :via => run_method              
+      invoke_command "thin start -C /home/bibapp/public_html/bibapp/current/config/thin.yml" , :via => run_method              
     rescue RuntimeError
       puts "### ERROR - Starting - THIN."
     end
@@ -52,7 +52,7 @@ namespace :bibapp do
       sh "script/delayed_job -p #{Rails.env} --pid-dir=#{delayed_job_pid_dir} stop"
 
       # Spin passenger
-      invoke_command "thin stop -C #{thin_conf}" , :via => run_method              
+      invoke_command "thin stop -C /home/bibapp/public_html/bibapp/current/config/thin.yml" , :via => run_method              
 
     end
 
