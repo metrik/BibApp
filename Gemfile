@@ -118,6 +118,10 @@ gem 'capistrano'
 #to start it, do 'bundle exec thin start' - this is important, as
 #doing simply 'thin start' may pull in unbundled gems and cause
 #dependency conflicts
+gem 'thin'
+
+
+
 group :development do
   gem 'thin'
   #If you want to use newrelic for profiling you can uncomment the following.
