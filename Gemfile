@@ -118,6 +118,7 @@ gem 'capistrano'
 #to start it, do 'bundle exec thin start' - this is important, as
 #doing simply 'thin start' may pull in unbundled gems and cause
 #dependency conflicts
+gem 'eventmachine', "1.0.0.beta.4.1"
 gem 'thin'
 
 
