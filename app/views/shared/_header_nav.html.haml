@@ -15,7 +15,7 @@
         %span #{Group.model_name.human_pl}
 
     %li{give_current_id_if_equal('people', controller_name)}
-      %a{:href => people_path}
+      %a{:href => people_index_path}
         %span #{Person.model_name.human_pl}
 
     %li{give_current_id_if_equal('publications', controller_name)}
