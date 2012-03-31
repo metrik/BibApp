@@ -20,6 +20,7 @@ set :repository, "git@github.com:metrik/BibApp.git"
 #directories on the server to deploy the application
 #the running instance gets links to [deploy_to]/current
 
+set :deploy_via, :remote_cache
 set :deploy_to, "/home/bibapp/public_html/bibapp"
 set :current, "#{deploy_to}/current"
 set :shared, "#{deploy_to}/shared"
@@ -51,11 +52,11 @@ namespace :deploy do
     run "git clone #{repository} #{current}"
   end
   
-  desc "Update the deployed code."
-  task :update_code, :except => { :no_release => true } do
+#  desc "Update the deployed code."
+#  task :update_code, :except => { :no_release => true } do
     #run "cd #{current_path}; git pull origin #{branch}"
-    run "cd #{current_path}; git fetch origin; git reset --hard master"
-  end
+#    run "cd #{current_path}; git fetch origin; git reset --hard master"
+#  end
   
   task :create_symlink , :except => { :no_release => true } do
   end
@@ -135,7 +136,7 @@ namespace :bundler do
 
 
   task :bundle_new_release, :roles => [:web], :except => { :no_release => true } do
-    #run "rm -rf #{current_path}/Gemfile.lock"
+    run "rm -rf #{current_path}/Gemfile.lock"
     run "cd #{current_path} && bundle install --without development test "
   end
 
