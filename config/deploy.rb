@@ -58,8 +58,8 @@ namespace :deploy do
 #    run "cd #{current_path}; git fetch origin; git reset --hard master"
 #  end
   
-  task :create_symlink , :except => { :no_release => true } do
-  end
+#  task :create_symlink , :except => { :no_release => true } do
+#  end
   
 
   desc "create a config directory under shared"
@@ -85,15 +85,18 @@ namespace :deploy do
     end
   end
 
+
+  desc "Run this after update code"
+  task :link_db_sqlite, :roles => :app do
+    #Thin
+    #invoke_command "ln -nfs #{shared_path}/config/thin.yml #{current_path}/config/thin.yml", :via => run_method
+    invoke_command "ln -nfs #{shared_path}/config/bibapp_production #{current_path}/db/bibapp_production", :via => run_method
+  end
 end
 
 
 
-desc "Run this after update code"
-after "update_code" do
-  #Thin
-  invoke_command "ln -nfs #{shared_path}/config/thin.yml #{current_path}/config/thin.yml", :via => run_method
-end
+
 
 
 set :thin_conf, "#{current_path}/config/thin.yml"   
@@ -136,7 +139,7 @@ namespace :bundler do
 
 
   task :bundle_new_release, :roles => [:web], :except => { :no_release => true } do
-    run "rm -rf #{current_path}/Gemfile.lock"
+    #run "rm -rf #{current_path}/Gemfile.lock"
     run "cd #{current_path} && bundle install --without development test "
   end
 
@@ -146,6 +149,7 @@ end
 after 'deploy:setup', 'deploy:create_shared_dirs'
 
 after 'deploy:update', 'deploy:link_config'
+after 'deploy:update', 'deploy:link_db_sqlite'
 after 'deploy:update', 'deploy:symlink_shared_dirs'
 after 'deploy:update', 'bundler:bundle_new_release'
 
