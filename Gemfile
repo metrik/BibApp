@@ -139,7 +139,7 @@ group :development do
   gem 'tolk', :git => 'git@github.com:BibApp/tolk.git', :branch => 'rails3'
 end
 
-group :test, :development do
+group :test do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'email_spec'
@@ -158,5 +158,5 @@ group :test, :development do
   #gem 'metric_fu
 
   #attempt to remove excess logging caused by postgres
-  gem 'silent-postgres'
+  #gem 'silent-postgres'
 end

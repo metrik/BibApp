@@ -8,7 +8,9 @@ class JsperantoLoadTranslations < Rails::Railtie
     FileUtils.mkdir_p(json_dir)
     I18n.available_locales.each do |locale|
       translations = YAML.load_file(File.join(yaml_dir, "#{locale}.yml"))
+      puts "*#{locale}*"
       json = JSON.pretty_generate(translations[locale.to_s]['jsperanto'])
+      puts json
       File.open(File.join(json_dir, "#{locale}.json"), "w") do |f|
         f.puts(json)
       end
