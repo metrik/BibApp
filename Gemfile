@@ -84,6 +84,7 @@ gem 'rails-i18n'
 #gem 'pg'
 #gem 'mysql'
 gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
+gem 'rb-readline'
 
 #dump database in YAML form - honestly, I'm not sure why we need this, but
 #while I am porting to Rails 3 I'm not going to worry about it.
