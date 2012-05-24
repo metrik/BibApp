@@ -7,7 +7,7 @@ module SharedHelper
 
   def letter_link_for(letters, letter, current, path)
     li_opts = (current == true) ? {:class => "current"} : {}
-    link = path ? "#{path[:path]}?page=#{letter}" : {:page=> letter}
+    link = path ? "#{path[:path]}?page=#{letter}" : {:page => letter}
     content_tag(:li, (letters.index(letter) ? link_to(letter, link, :class => "some") : content_tag(:a, letter, :class => 'none')), li_opts)
   end
 
@@ -134,6 +134,11 @@ module SharedHelper
     items = ('A'..'Z').to_a
     items = ('0'..'9').to_a + items if include_numbers
     return items
+  end
+
+  def subclass_partial_for(work)
+    file_name = "shared/work_subclasses/#{work['type'].downcase.gsub(" ", "_")}"
+    File.exists?(File.join(Rails.root, 'app', 'views', file_name)) ? file_name : 'shared/work_subclasses/generic'
   end
 
 end

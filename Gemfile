@@ -20,7 +20,7 @@ gem 'backports'
 gem 'make_resourceful'
 
 #file attachment - to replace attachment_fu
-gem 'paperclip'
+gem 'paperclip', "~>2.7.0"
 
 #HTMLEntities - used to encode UTF-8 data so that it is valid in HTML
 gem "htmlentities", "~>4.0.0"
@@ -70,7 +70,7 @@ gem 'delayed_job_active_record'
 
 #data structures
 gem 'acts_as_list'
-gem 'acts_as_tree', "~> 1.2.3", :git => 'https://github.com/parasew/acts_as_tree.git'
+gem 'acts_as_tree_rails3'
 
 #Rails translations
 gem 'rails-i18n'
