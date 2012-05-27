@@ -76,7 +76,7 @@ class AddInitialPubKeys < ActiveRecord::Migration
     end
     
     # Index everything
-    Index.batch_index
+    #Index.batch_index
   end
 
   def self.down

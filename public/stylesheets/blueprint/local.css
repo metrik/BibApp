@@ -7,28 +7,28 @@
 */
 
 .container {
- border-left:1px dotted #000;
- border-right:1px dotted #000;
+ border-left:0px dotted #000;
+ border-right:0px dotted #000;
 }
 
 #header {
- color: #990000; /* Red */
- border-bottom: 3px double #990000; /* Gold */
- background-image:url('../../images/header.png');
+	color:#333; /* Red */
+ border-bottom: 3px double 	color:#333; /* Gold */
 }
 
-#header a{color:#990000;} /* Red */
+#header a{color:#333;} /* Red */
 #filter {color:#CC9933;} /* Gold */
 
 #footer {
 	color:#A2A2A2;
-	border-top: 1px solid #990000;
-	border-bottom: 3px solid #000; /* Gold */
-	background-image:url('../../images/header.png');
-}
+	border-top: 0px solid #333;
+	border-bottom: 0px solid #000; /* Gold */
+	background: url('../../images/conicyt_logo.png'); background-repeat:no-repeat; background-position:right;
+	position:relative;
+	top:5px;}
 
 #footer a {
-	color:#990000;
+	color:#333;
 }
 
 /* Style for displaying Deposit License Agreement, etc. in nice scrollable div */

@@ -275,7 +275,6 @@ GEM
     sort_alphabetical (0.1.3)
       activesupport
     sqlite3-ruby (1.2.5)
-
     systemu (2.5.0)
     term-ansicolor (1.0.7)
     thin (1.3.1)
@@ -286,7 +285,6 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-
     tzinfo (0.3.33)
     uuid (2.3.5)
       macaddr (~> 1.0)

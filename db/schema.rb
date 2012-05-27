@@ -72,16 +72,16 @@ ActiveRecord::Schema.define(:version => 20120309203420) do
   create_table "external_system_uris", :force => true do |t|
     t.integer  "external_system_id"
     t.integer  "work_id"
-    t.text     "uri"
+    t.text     "uri",                :limit => 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "external_systems", :force => true do |t|
-    t.text     "name"
+    t.text     "name",          :limit => 255
     t.string   "abbreviation"
-    t.text     "base_url"
-    t.text     "lookup_params"
+    t.text     "base_url",      :limit => 255
+    t.text     "lookup_params", :limit => 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "machine_name"
@@ -355,17 +355,17 @@ ActiveRecord::Schema.define(:version => 20120309203420) do
 
   create_table "works", :force => true do |t|
     t.string   "type"
-    t.text     "title_primary"
-    t.text     "title_secondary"
-    t.text     "title_tertiary"
-    t.text     "affiliation"
+    t.text     "title_primary",            :limit => 255
+    t.text     "title_secondary",          :limit => 255
+    t.text     "title_tertiary",           :limit => 255
+    t.text     "affiliation",              :limit => 255
     t.string   "volume"
     t.string   "issue"
     t.string   "start_page"
     t.string   "end_page"
     t.text     "abstract"
     t.text     "notes"
-    t.text     "links"
+    t.text     "links",                    :limit => 255
     t.integer  "work_state_id"
     t.integer  "work_archive_state_id"
     t.integer  "publication_id"
@@ -374,10 +374,10 @@ ActiveRecord::Schema.define(:version => 20120309203420) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "original_data"
-    t.integer  "batch_index",              :default => 0
+    t.integer  "batch_index",                             :default => 0
     t.text     "scoring_hash"
     t.string   "language"
-    t.text     "copyright_holder"
+    t.text     "copyright_holder",         :limit => 255
     t.boolean  "peer_reviewed"
     t.string   "machine_name"
     t.string   "publication_place"

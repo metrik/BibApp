@@ -12,11 +12,10 @@
 /* ============================================= */
 /* Primary container for all content */
 .container {
-  background-color: #FFF;
 }
 
 #header {
-  margin-bottom: 0;
+  margin-bottom: 40;
   padding-top: 2em;
 }
 
@@ -69,6 +68,7 @@ ul.header-nav a:hover {
   padding: 0;
   float: left;
   line-height: normal;
+font-size:14px;
 }
 
 #navigation li {
@@ -80,7 +80,7 @@ ul.header-nav a:hover {
 
 #navigation a {
   display: block;
-  padding: 5px 5px 7px 5px;
+  padding: 5px 15px 7px 15px;
   text-decoration: none;
 }
 
@@ -89,11 +89,11 @@ ul.header-nav a:hover {
 }
 
 #navigation li#current {
-  background-color: #CCC;
+  background-color: #009581;
 }
 
 #navigation #current a {
-  color: #990000;
+  color: #fff;
   font-weight: bold;
 }
 

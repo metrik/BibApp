@@ -20,7 +20,7 @@ class AddAuthorityKeysToWorks < ActiveRecord::Migration
        end
      end
      
-     Index.batch_index
+     #Index.batch_index
   end
 
   def self.down

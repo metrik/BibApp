@@ -123,9 +123,9 @@ es:
         title_secondary: "Series Title"
       user:
         email: Email
-        default_locale: Default locale
+        default_locale: Idioma
         password: Password
-        password_confirmation: "Confirm Password"
+        password_confirmation: "Confirmar Password"
       web_page:
         date_range: "Date of Last Visit"
       work:
@@ -210,8 +210,8 @@ es:
         one: Grant
         other: Grants
       group:
-        one: Group
-        other: Groups
+        one: Centro de Investigación
+        other: Centros de Investigación
       identifier:
         one: Identifier
         other: Identifiers
@@ -258,17 +258,17 @@ es:
         one: Performance
         other: Performances
       person:
-        one: Person
-        other: People
+        one: Investigador
+        other: Investigadores
       presentation_lecture:
         one: "Presentation / Lecture"
         other: "Presentations / Lectures"
       publication:
-        one: Publication
-        other: Publications
+        one: Publicación
+        other: Publicaciones
       publisher:
-        one: Publisher
-        other: Publishers
+        one: Editorial
+        other: Editoriales
       recording_moving_image:
         one: "Recording (Moving Image)"
         other: "Recordings (Moving Image)"
@@ -297,8 +297,8 @@ es:
         one: "Web Site"
         other: "Web Sites"
       work:
-        one: Work
-        other: Works
+        one: Trabajo
+        other: Trabajos
   admin:
     deposit:
       date: "Date Deposited"
@@ -329,8 +329,8 @@ es:
     account: Account
     add: Add
     admin: Admin
-    advanced: Advanced
-    advanced_search: "Advanced Search"
+    advanced: Avanzada
+    advanced_search: "Búsqueda Avanzada"
     all: All
     archive: "Prepare for archiving full text"
     are_you_sure: "Are you sure?"
@@ -366,8 +366,8 @@ es:
     important: Important
     imports: "Manage imports"
     keywords: Keywords
-    login: Login
-    logout: Logout
+    login: Acceso
+    logout: Cerrar Sesión
     more_groups: "More groups"
     more_people: "More people"
     more_publications: "More publications"
@@ -385,15 +385,15 @@ es:
     remove: Remove
     required: "required"
     result:
-      one: Result
-      other: Results
+      one: Resultado
+      other: Resultados
     result_with_query:
-      one: "Result for:"
-      other: "Results for:"
+      one: "Resultado para:"
+      other: "Resultados para:"
     save: Save
     saved: Saved
     score: Score
-    search: Search
+    search: Buscar
     search_within: "Search Within"
     select: Select
     select_all: "Select All"
@@ -529,12 +529,12 @@ es:
       import_persons_subject: "%{app_name} - batch upload of persons has completed"
       import_review_subject: "%{app_name} - Batch import ready for review"
     passwords:
-      flash_create_inactive: "This account has not yet been activated. Resending activation link."
-      flash_create_no_account: "Sorry, we cannot find that account.  Try again."
-      flash_create_sent: "We sent a new password to %{email}"
-      flash_update_bad_match: "Sorry, your new password didn't match the confirmation.  Try again."
-      flash_update_incorrect: "Sorry, your old password was incorrect. Try again."
-      flash_update_success: "Your password was updated successfully."
+      flash_create_inactive: "Esta cuenta no ha sido activada aún. Hemos reenviado el link de activación."
+      flash_create_no_account: "Lo sentimos, no hemos podido encontrar esa cuenta.  Inténtalo nuevamente."
+      flash_create_sent: "Hemos enviado una nueva cuenta a %{email}"
+      flash_update_bad_match: "Passwords no coinciden. Inténtalo nuevamente."
+      flash_update_incorrect: "Tu antigua password no coincide. Inténtalo nuevamente."
+      flash_update_success: "Tu password ha sido actualizada exitósamente."
     people:
       batch_csv_error: "An error was generated processing your request."
       confirm: "Really delete this person?"
@@ -573,8 +573,8 @@ es:
       flash_destroy_failure: "This publication has %{count} work associated with it, which must be altered or removed before this publication can be deleted."
       flash_destroy_success: "Publications were successfully deleted."
       new: "Add a Publication"
-      publication_name: "Publication Name"
-      publisher: "Published by"
+      publication_name: "Nombre de la Publicación"
+      publisher: "Publicada por"
     publishers:
       authority: "Admin Publisher Authorities"
       authorized: "Authorized names"
@@ -627,7 +627,7 @@ es:
       delete: "Delete user"
       edit: "Edit user"
       flash_activate: "Signup is complete!  You may now login using your email and password."
-      flash_create: "Thanks for signing up!  You should receive an email (%{email}) shortly which will allow you to activate your account."
+      flash_create: "Gracias por registrarte!. Recubirás un email (%{email}) con el cual podrás activar tu cuenta."
       flash_update_email_duplicate: "Problem updating email - this email may be in use already. Try again."
       flash_update_email_invalid: "Problem updating email - your code or new email is incorrect. Try again."
       flash_update_email_success: "Email updated"
@@ -715,9 +715,9 @@ es:
     form:
       parent_group: "Parent Group"
     group_table:
-      group_name: "Group Name"
-      members: Members
-      parent_group: "Parent Group"
+      group_name: "Nombre del Grupo"
+      members: Participantes
+      parent_group: "Grupo Principal"
     hidden:
       empty: "No hidden groups"
       header: "Hidden Groups"
@@ -877,9 +877,9 @@ es:
       fails: "There was a problem deleting!"
   memberships:
     action_links:
-      all_groups: "All Groups"
+      all_groups: "Todos los Grupos"
     group:
-      confirm: "Are you sure you want to leave this group?"
+      confirm: "Seguro de abandonar este grupo?"
       leave: "Leave group"
       year_joined: "Year Joined"
       year_left: "Year Left"
@@ -908,15 +908,15 @@ es:
       no_claim: "Nobody at %{university_name} has claimed this name. This might be somebody from another campus."
   passwords:
     edit:
-      confirm: "Confirm New Password"
-      header: "Change Password"
-      new: "New Password"
-      old: "Old Password"
-      submit: "Update Password"
+      confirm: "Confirmar nueva Password"
+      header: "Cambiar Password"
+      new: "Nueva Password"
+      old: "Antigua Password"
+      submit: "Actualizar Password"
     new:
-      header: "Forgot Password"
-      legend: "Request New Password"
-      submit: "Send Password"
+      header: "Olvidé mi Password"
+      legend: "Solicitar nueva Password"
+      submit: "Enviar Password"
   pen_names:
     name_string_filter:
       no_results_html: "<strong>%{phrase}</strong> returned no results"
@@ -929,9 +929,9 @@ es:
       instructions_html: "Check the box next to a pen name and it will be automatically added to your <strong>Current pen names</strong>."
       suggested: "Suggested pen names"
     new_namestring_form:
-      add_text: "Add a name string (ex. \"Smith, J\")"
+      add_text: "Add a name string (ej. \"Smith, J\")"
     search_for_namestrings:
-      search_text: "Search other last names to add suggestions (ex. \"Smith\")"
+      search_text: "Search other last names to add suggestions (ej. \"Smith\")"
     suggested_namestrings:
       no_suggestions: "There are no immediate suggestions for"
   people:
@@ -968,7 +968,7 @@ es:
     show_work_types:
       header: "Types of Work"
     show_works:
-      recent: "recent additions"
+      recent: "Recientes"
   pub_common:
     authority_actions:
       submit: "Set Authority"
@@ -1001,8 +1001,8 @@ es:
       save_go: "Save and go to list"
       save_show: "Save and show"
     index_table:
-      publisher_name: "Publisher Name"
-      recent_year: "Recent Year"
+      publisher_name: "Nombre de la Editorial"
+      recent_year: "Último año"
     show:
       auth_name: "authorized name for"
       auth_title: "Authorized Title"
@@ -1019,22 +1019,22 @@ es:
       no_editors: "No editors currently assigned."
   search:
     advanced_search_form:
-      authors_text: "Return items by author"
-      groups_text: "Return items by groups"
-      issn_isbn_text: "Return item associated with the standard number"
-      keywords_text: "Return items with these words appearing anywhere"
-      legend: "Advanced Search"
-      restrict_date: "Return only items published from"
-      title_text: "Return items with these words in the title"
+      authors_text: "Items por autor"
+      groups_text: "Items por grupos"
+      issn_isbn_text: "Items por ISSN"
+      keywords_text: "Items por palabras claves"
+      legend: "Búsqueda avanzada"
+      restrict_date: "Items por editorial"
+      title_text: "Items con palabras clave en el título"
       to: to
     no_hits:
-      advanced_search: "Try our advanced search options."
-      different_keywords: "Try different keywords."
-      double_check: "Double check your spelling."
-      error: "Sorry, your search for &ldquo;&{query}&rdquo; came up empty."
-      suggestions: Suggestions
+      advanced_search: "Prueba con nuestra búsqueda avanzada."
+      different_keywords: "Prueba con palabras diferentes."
+      double_check: "Revisa la ortografìa."
+      error: "Los sentimos, tu búsqueda no obtuvo resultados."
+      suggestions: Sugerencias
     spelling_suggestions:
-      did_you_mean: "Did you mean"
+      did_you_mean: "Quisiste decir"
   shared:
     application_error:
       email_subject: "%{app_name} Support"
@@ -1079,14 +1079,14 @@ es:
       generic: Generic
       header: "Login using external credentials"
     local_login_form:
-      cookies: "(requires browser cookies be enabled)"
-      forgot_password: "Forgot Password"
-      header: "Login using local (%{app_name}) credentials"
-      remember: "Remember Me"
-      sign_up: "Sign Up"
-      submit: "Log in"
+      cookies: "(requiere activar cookies en tu computador)"
+      forgot_password: "Olvidé mi Password"
+      header: "Iniciar Sesión"
+      remember: "Recordarme"
+      sign_up: "Registrarse"
+      submit: "Acceder"
     show_options_form:
-      send_to: "Send to"
+      send_to: "Enviar a"
   users:
     edit:
       change_password: "Change Password"
@@ -1096,9 +1096,9 @@ es:
       important_text_html: "When you submit this form, you will receive a message with a confirmation link at the new email address above. Your email address will not be changed until <em>after</em> you visit this confirmation link."
       legend: "User Account"
     new:
-      header: "Create an Account"
-      legend: "User Account"
-      submit: "Sign Up"
+      header: "Crear una Cuenta"
+      legend: "Cuenta de Usuario"
+      submit: "Registrar"
     show:
       account_information: "Account Information"
       header: "User Account (%{email})"
@@ -1232,7 +1232,7 @@ es:
       delete_link: "Delete this work"
       header: "Edit a Work"
     first_works:
-      recent: "Recent additions"
+      recent: "Recientes"
     forms:
       fields:
         author_list_item:

@@ -37,7 +37,7 @@ class UpdateWorkTypes < ActiveRecord::Migration
         end
         ri_a << w
       end
-      Index.batch_update_solr(ri_a)
+      #Index.batch_update_solr(ri_a)
     end
 
   end

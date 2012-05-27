@@ -24,7 +24,7 @@ class AddMachineNameToNameStrings < ActiveRecord::Migration
       "SELECT n1.id, n1.machine_name FROM name_strings n1
       join name_strings n2 on n2.machine_name = n1.machine_name
       where n1.id != n2.id
-      order by machine_name"
+      order by n1.machine_name"
     )
     puts "Duplicates: #{duplicates.size}"
     

@@ -1,6 +1,10 @@
 class SetGroupsHideFalse < ActiveRecord::Migration
   def self.up
-    execute "UPDATE groups SET hide = false"
+    begin
+      execute "UPDATE groups SET hide = false"
+    rescue
+      true
+    end
   end
   
   def self.down
