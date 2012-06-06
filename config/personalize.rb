@@ -29,14 +29,14 @@ $APPLICATION_LOGO            = "bibapp.png"
 
 # Name of your University and University URL
 #moved to locale file
-#$UNIVERSITY_FULL_NAME        = "University of Wisconsin - Madison"
-#$UNIVERSITY_SHORT_NAME       = "UW-Madison"
-$UNIVERSITY_URL              = "http://wisc.edu"
+#$UNIVERSITY_FULL_NAME        = "CONICYT"
+#$UNIVERSITY_SHORT_NAME       = "CONICYT"
+$UNIVERSITY_URL              = "http://www.conicyt.cl"
 
 # Name of your University Library and Library URL
 #moved to locale file
-#$LIBRARY_NAME                = "Wendt Library"
-$LIBRARY_URL                 = "http://wendt.library.wisc.edu"
+#$LIBRARY_NAME                = ""
+$LIBRARY_URL                 = "http://www.conicyt.cl"
 
 # Full Address / Contact info of Unit running BibApp
 #moved to locale file
@@ -45,7 +45,7 @@ $LIBRARY_URL                 = "http://wendt.library.wisc.edu"
 # Name and URL of your local institutional repository (only used if SWORD plugin is enabled)
 #moved to locale file
 #$REPOSITORY_NAME = "My Repository"
-$REPOSITORY_BASE_URL = "http://my.repository.edu/"
+$REPOSITORY_BASE_URL = "http://www.conicyt.cl"
 
 ####
 # Linking To Publications

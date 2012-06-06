@@ -47,6 +47,7 @@ ul.header-nav {
   margin: 0;
   float: right;
   text-align: right;
+  width:300px;
 }
 
 ul.header-nav li {
@@ -747,6 +748,10 @@ div.person {
 .heading a {
   text-decoration: none;
   color: #000;
+}
+
+.heading a img{
+width:15px;
 }
 
 /*list of actions on a specific page*/

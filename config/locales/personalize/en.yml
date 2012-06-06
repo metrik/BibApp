@@ -30,9 +30,9 @@ en:
       unknown:
         name: "Unknown"
         explanation: "Could not determine from data"
-    university_full_address: "215 N. Randall Avenue Madison, WI 53706-1494 | Phone: 608.890.0787"
-    university_full_name: "University of Wisconsin - Madison"
-    university_short_name: "UW-Madison"
+    university_full_address: ""
+    university_full_name: ""
+    university_short_name: ""
     #for work_archive_status 1 = not ready, rights unknown, 2 = ready for archiving, 3 = repository record created, url known
     work_archive_status:
       1: "Not Ready, rights unknown"

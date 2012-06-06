@@ -325,18 +325,18 @@ es:
       update: "Update SHERPA Data"
     tasks: "Administrative Tasks"
   app:
-    about: About
-    account: Account
-    add: Add
+    about: Acerca de
+    account: Mis Datos
+    add: Agregar
     admin: Admin
     advanced: Avanzada
     advanced_search: "Búsqueda Avanzada"
     all: All
     archive: "Prepare for archiving full text"
-    are_you_sure: "Are you sure?"
+    are_you_sure: "Estás seguro(a)?"
     ascending: Ascending
     authorized: "Authority controlled names"
-    authors: Authors
+    authors: Autores
     back: Back
     batch_import: "Batch Import"
     blank: ""
@@ -399,7 +399,7 @@ es:
     select_all: "Select All"
     send_to: "Send to"
     show: Show
-    signup: Signup
+    signup: Registro
     sort_by: "Sort By"
     sort_title: Title
     source: Source
@@ -620,8 +620,8 @@ es:
       signup_notification_subject: "Please activate your new account"
       update_email_subject: "Email address update confirmation"
     user_sessions:
-      flash_create_successful: "Login successful!"
-      flash_destroy_successful: "Logout successful!"
+      flash_create_successful: "Acceso correcto!"
+      flash_destroy_successful: "Has cerrado la sesión!"
     users:
       confirm: "Really delete this user?"
       delete: "Delete user"
@@ -774,8 +774,8 @@ es:
         other: "%{count} works to %{imported_for}."
       remaining_total: "%{count} remain to match."
     new:
-      add_import: "Add an Import"
-      show_all: "Show all Imports"
+      add_import: "Agregar una carga de usuarios"
+      show_all: "Mostrar todas las cargas de usuarios"
     pen_names:
       my_names: "My Names"
       works_matched: "Works Matched"
@@ -1089,11 +1089,11 @@ es:
       send_to: "Enviar a"
   users:
     edit:
-      change_password: "Change Password"
-      email_legend: "Change Email Address"
-      email_submit: "Update Email"
-      header: "Edit My Account"
-      important_text_html: "When you submit this form, you will receive a message with a confirmation link at the new email address above. Your email address will not be changed until <em>after</em> you visit this confirmation link."
+      change_password: "Modificar Password"
+      email_legend: "Modificar Email"
+      email_submit: "Actualizar Email"
+      header: "Modificar Mis Datos"
+      important_text_html: "Cuando tu envíes este formulario, recibirás un email con un mensaje de confirmación de la nueva dirección. Tu email no será modificado <em>hasta que</em> visites el link de confirmación."
       legend: "User Account"
     new:
       header: "Crear una Cuenta"
