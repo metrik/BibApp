@@ -1,6 +1,6 @@
 %fieldset#personal_info
   %legend #{t 'app.personal_info'}
-  = form_for @person do |form|
+  = form_for @people, :url => people_index_path do |form|
     %div
       = submit_tag t('app.save'), :disable_with => t('.disable'), :class => "button positive"
       = submit_tag t('app.cancel'), :name => "cancel", :class => "button negative"
@@ -8,7 +8,7 @@
       %div
         %label #{Person.human_attribute_name(:uid)}*
         = form.text_field :uid
-        = error_for "person", "uid"
+        = error_for "people", "uid"
       %div
         %label #{Person.human_attribute_name(:first_name)}
         = form.text_field :first_name
@@ -36,7 +36,7 @@
       %div
         %label #{Person.human_attribute_name(:postal_address)}
         = form.text_area :postal_address, :class => "smallbox"
-      -unless @person.new_record?
+      -unless @people.new_record?
         %div
           %label #{Person.human_attribute_name(:active)}?
           = form.check_box :active, :class => "checkbox"

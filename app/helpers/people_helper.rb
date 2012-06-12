@@ -14,10 +14,10 @@ module PeopleHelper
   end
 
   def edit_header(person)
-    t('common.people.edit_header_html', :link => link_to(h(@person.display_name), person_path(@person)))
+    t('common.people.edit_header_html', :link => link_to(h(@people.display_name), people_path(@people)))
   end
 
   def show_header(person)
-    "#{link_to(h(@person.display_name), person_path(@person))} #{link_to(fugue_icon_tag('feed'), person_path(@person, :format => "rss"))}".html_safe
+    "#{link_to(h(@person.display_name), people_path(@person))} #{link_to(fugue_icon_tag('feed'), people_path(@person, :format => "rss"))}".html_safe
   end
 end

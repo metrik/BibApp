@@ -118,7 +118,7 @@ class PeopleController < ApplicationController
     end
 
     before :edit do
-      @title = t('common.people.edit_title', :name => @person.display_name)
+      @title = t('common.people.edit_title', :name => @people.display_name)
     end
 
   end
@@ -142,9 +142,9 @@ class PeopleController < ApplicationController
         respond_to do |format|
           if @person.save
             flash[:notice] = t('common.people.flash_create_success')
-            format.html { redirect_to new_person_pen_name_path(@person.id) }
+            format.html { redirect_to new_people_pen_name_path(@person.id) }
             #TODO: not sure this is right
-            format.xml { head :created, :location => person_url(@person) }
+            format.xml { head :created, :location => people_url(@person) }
           else
             flash[:warning] = t('common.people.flash_create_field_missing')
             format.html { render :action => "new" }
@@ -153,7 +153,7 @@ class PeopleController < ApplicationController
         end
       else
         respond_to do |format|
-          flash[:error] = t('common.people.flash_create_person_exists_html', :url => person_path(@dupeperson.id))
+          flash[:error] = t('common.people.flash_create_person_exists_html', :url => people_path(@dupeperson.id))
           format.html { render :action => "new" }
           #TODO: what will the xml response be?
           #format.xml  {render :xml => "error"}
