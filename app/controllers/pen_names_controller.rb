@@ -17,8 +17,8 @@ class PenNamesController < ApplicationController
       #only 'editor' of person can assign a pen name
       permit "editor of Person"
 
-      @suggestions = NameString.name_like(@person.last_name).order_by_name
-      @title = "#{@person.display_name}: #{PenName.model_name.human_pl}"
+      @suggestions = NameString.name_like(@people.last_name).order_by_name
+      @title = "#{@people.display_name}: #{PenName.model_name.human_pl}"
 
     end
 
@@ -117,13 +117,13 @@ class PenNamesController < ApplicationController
   private
 
   def ajax_setup
-    @person = Person.find params[:person_id]
+    @person = Person.find params[:people_id]
     @name_string = NameString.find params[:name_string_id].split('_').last
     permit 'editor of :person', :person => @person
   end
 
   def find_person
-    @person = Person.find_by_id(params[:person_id])
+    @people = Person.find_by_id(params[:people_id])
   end
 
   def find_name_string

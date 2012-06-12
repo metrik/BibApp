@@ -40,7 +40,7 @@ class UserSessionsController < ApplicationController
     user = @user_session.record
     if params[:return_to] and params[:return_to].match(/\/login/)
       if user and user.person
-        return person_url(user.person, :locale => user.default_locale)
+        return people_url(user.person, :locale => user.default_locale)
       else
         return works_url(:locale => user.default_locale)
       end

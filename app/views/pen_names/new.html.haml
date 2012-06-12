@@ -1,15 +1,15 @@
 - include_javascript('specific/pen_names/new')
 - if current_user_any_role?("editor", Group)
   = render :layout => '/layouts/admin_bar' do
-    %li= link_to t('pen_names.new.delete'), person_url(@person), :method => :delete, :confirm => t('pen_names.new.confirm')
+    %li= link_to t('pen_names.new.delete'), people_url(@people), :method => :delete, :confirm => t('pen_names.new.confirm')
     %li= link_to t('pen_names.new.add'), new_people_path
 
-= render :layout => '/layouts/main_body', :locals => {:header => body_header(@person)} do
+= render :layout => '/layouts/main_body', :locals => {:header => body_header(@people)} do
   = render "shared/local_nav", :object => "person", :state => "edit"
 
   .span-4.prepend-1
     #picture.span-3
-    %p= render "shared/person_image", :o => @person
+    %p= render "shared/person_image", :o => @people
 
   %fieldset
     %legend #{PenName.model_name.human_pl}

@@ -2,5 +2,5 @@
   #{t '.search_text'}
   %br/
   = text_field_tag(:q)
-  = hidden_field_tag(:person_id, @person.id)
+  = hidden_field_tag(:person_id, @people.id)
   = submit_tag t('app.search')
