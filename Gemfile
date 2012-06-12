@@ -36,7 +36,7 @@ gem "libxml-ruby", :require => "xml/libxml"
 gem "namecase", "~>1.1.0"
 
 #RedCloth - converts plain text or textile to HTML (also used by HAML)
-gem "RedCloth",  "~>4.1.9", :require => "redcloth"
+gem "RedCloth",  ">4.1.9", :require => "redcloth"
 
 #RubyZip - used to create Zip file to send via SWORD
 gem "rubyzip", "~>0.9.1", :require => "zip/zip"
@@ -141,17 +141,19 @@ group :development do
 end
 
 group :test do
-  gem 'rspec'
-  gem 'rspec-rails'
-  gem 'email_spec'
-  gem 'ruby-debug-base'
-  gem 'ruby-debug'
-  gem 'ruby-debug-ide'
-  gem 'shoulda'
-  gem 'factory_girl'
-  gem 'rcov'
-  gem 'cucumber-rails'
-  gem 'database_cleaner'
+  # gem 'rspec'
+  # gem 'rspec-rails'
+  # gem 'email_spec'
+  # gem 'ruby-debug-base'
+  # gem 'ruby-debug'
+  # gem 'ruby-debug-ide'
+  # gem 'shoulda'
+  # gem 'factory_girl'
+  # gem 'rcov'
+  # gem 'cucumber-rails'
+  # gem 'database_cleaner'
+  # 
+  
   #I'd prefer to add metric_fu directly here, but something it pulls
   #in pulls in something else that conflicts with the Keyword class.
   #So instead I've installed the metrical gem separately to see

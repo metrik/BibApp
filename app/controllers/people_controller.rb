@@ -263,5 +263,10 @@ class PeopleController < ApplicationController
     end
     redirect_to batch_csv_show_people_url(:completed => msg)
   end
+  
+  def current_model
+    Person
+    
+  end
 
 end
